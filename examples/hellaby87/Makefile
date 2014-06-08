@@ -3,7 +3,6 @@ SHELL = /bin/sh
 .SUFFIXES: .c .o .d .a
 src = ../../src/
 lib = ../../src/.libs/libltb.a
-#lib = /home/lodka/temp/lib/usr/local/lib/ltbtoolkit/libltb.so
 VPATH = src:../../src
 BINDIR = bin
 OBJS = hellaby87.o main.o
