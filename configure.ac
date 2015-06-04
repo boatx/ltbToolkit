@@ -4,6 +4,7 @@ AM_INIT_AUTOMAKE([-Wall gnu])
 AC_PROG_CC([gcc cc])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([
+                 ltbtoolkit.pc
                  Makefile
                  src/Makefile
                  examples/Makefile
