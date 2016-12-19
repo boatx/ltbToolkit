@@ -1,4 +1,4 @@
-#!/bins/sh
+#!/bin/sh
 libtoolize
 aclocal
 autoheader
