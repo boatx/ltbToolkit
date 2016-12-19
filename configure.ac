@@ -12,14 +12,25 @@ AC_CONFIG_FILES([
 
 AC_CONFIG_MACRO_DIR([m4])
 
+AM_CONDITIONAL([DX_COND_rtf], [test x$doxygen-rtf=xtrue])
+AM_CONDITIONAL([DX_COND_html], [test x$doxygen-html=xtrue])
+AM_CONDITIONAL([DX_COND_man], [test x$doxygen-man=xtrue])
+AM_CONDITIONAL([DX_COND_ps], [test x$doxygen-ps=xtrue])
+AM_CONDITIONAL([DX_COND_pdf], [test x$doxygen-pdf=xtrue])
+AM_CONDITIONAL([DX_COND_latex], [test x$doxygen-latex=xtrue])
+AM_CONDITIONAL([DX_COND_chm], [test x$doxygen-chm=xtrue])
+AM_CONDITIONAL([DX_COND_chi], [test x$doxygen-chi=xtrue])
+AM_CONDITIONAL([DX_COND_xml], [test x$doxygen-xml=xtrue])
+AM_CONDITIONAL([DX_COND_doc], [test x$doxygen-doc=xtrue])
+
 DX_HTML_FEATURE(ON)
-DX_CHM_FEATURE(OFF)
-DX_CHI_FEATURE(OFF)
+DX_PDF_FEATURE(ON)
+DX_PS_FEATURE(ON)
 DX_MAN_FEATURE(OFF)
 DX_RTF_FEATURE(OFF)
+DX_CHM_FEATURE(OFF)
+DX_CHI_FEATURE(OFF)
 DX_XML_FEATURE(OFF)
-DX_PDF_FEATURE(ON)
-DX_PS_FEATURE(OFF)
 DX_INIT_DOXYGEN(ltbToolkit, doxygen.cfg, doc)
 
 AM_PROG_AR
