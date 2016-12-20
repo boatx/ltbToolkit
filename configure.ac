@@ -12,15 +12,15 @@ AC_CONFIG_FILES([
 
 AC_CONFIG_MACRO_DIR([m4])
 
-DX_HTML_FEATURE(ON)
-DX_CHM_FEATURE(OFF)
-DX_CHI_FEATURE(OFF)
-DX_MAN_FEATURE(OFF)
-DX_RTF_FEATURE(OFF)
-DX_XML_FEATURE(OFF)
-DX_PDF_FEATURE(ON)
-DX_PS_FEATURE(OFF)
-DX_INIT_DOXYGEN(ltbToolkit, doxygen.cfg, doc)
+#DX_HTML_FEATURE(ON)
+#DX_CHM_FEATURE(OFF)
+#DX_CHI_FEATURE(OFF)
+#DX_MAN_FEATURE(OFF)
+#DX_RTF_FEATURE(OFF)
+#DX_XML_FEATURE(OFF)
+#DX_PDF_FEATURE(ON)
+#DX_PS_FEATURE(OFF)
+#DX_INIT_DOXYGEN(ltbToolkit, doxygen.cfg, doc)
 
 AM_PROG_AR
 LT_INIT
@@ -30,8 +30,8 @@ AC_OPENMP
 
 AC_CHECK_LIB([gslcblas],[cblas_dgemv])
 AC_CHECK_LIB([gsl],[gsl_spline_init],,
-	[AC_MSG_ERROR(Could not find gsl. Hint (1)  find /usr -name "*gsl*" -print   Hint (2)  install gsl*.a  e.g. from  http://www.gnu.org/software/gsl/ and put it in /usr/local/lib/ or set environment variable LDFLAGS to be -L/my/directory/lib/ with the library and CPPFLAGS to be -I/my/directory/include for the include files.)
-	])
+        [AC_MSG_ERROR(Could not find gsl. Hint (1)  find /usr -name "*gsl*" -print   Hint (2)  install gsl*.a  e.g. from  http://www.gnu.org/software/gsl/ and put it in /usr/local/lib/ or set environment variable LDFLAGS to be -L/my/directory/lib/ with the library and CPPFLAGS to be -I/my/directory/include for the include files.)
+        ])
 
 AC_CHECK_LIB([m], [cos])
 AC_CHECK_FUNCS([floor pow sqrt cbrt])
